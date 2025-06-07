@@ -1,15 +1,29 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionablyLate</title>
+    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
+</head>
 
-@section('css')
-<link rel="stylesheet" href="{{ asset('css/confirm.css') }}">
-@endsection
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a class="header__logo" href="/">
+                FashionablyLate
+            </a>
+        </div>
+    </header>
 
-@section('content')
+<!--@section('content') -->
 <div class="confirm__content">
     <div class="confirm__heading">
         <h2>Confirm</h2>
     </div>
-    <form class="form" action="/contacts" method="post">
+    <form class="form" action="/thanks" method="post">
         @csrf
         <div class="confirm-table">
             <table class="confirm-table__inner">
@@ -60,7 +74,7 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">お問い合わせ内容</th>
                     <td class="confirm-table__text">
-                        <input type="text" name="message" value="{{ $contact['message'] }}" readonly />
+                        <input type="text" name="detail" value="{{ $contact['message'] }}" readonly />
                     </td>
                 </tr>
             </table>
@@ -71,4 +85,4 @@
         </div>
     </form>
 </div>
-@endsection
+<!-- @endsection -->

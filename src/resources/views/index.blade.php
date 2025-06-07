@@ -1,16 +1,28 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionablyLate</title>
+    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+</head>
 
-@section('css')
-<link rel="stylesheet" href="{{ asset('css/index.css') }}" />
-@endsection
-
-@section('content')
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a class="header__logo" href="/">
+                FashionablyLate
+            </a>
+        </div>
+    </header>
 
         <div class="contact-form__content">
             <div class="contact-form__heading">
                 <h2>Contact</h2>
             </div>
-            <form class="form" action="contents/confirm" method="post">
+            <form class="form" action="/confirm" method="post">
                 @csrf
                 <div class="form-group">
                     <div class="form__group-title">
@@ -132,7 +144,7 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input-text">
-                            <input type="text" name="message" placeholder="お問い合わせ内容をご記載ください" value="{{ old('message') }}" />
+                            <input type="text" name="detail" placeholder="お問い合わせ内容をご記載ください" value="{{ old('message') }}" />
                         </div>
                         <div class="form__error">
                             @error('message')
@@ -146,3 +158,5 @@
                 </div>
             </form>
         </div>
+    </body>
+</html>
