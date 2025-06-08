@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FashionablyLate</title>
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/thanks.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
+@extends('layouts.app')
 
-</head>
-<body>
-    <header class="header">
-        <div class="header__inner">
-            <a class="header__logo" href="/">
-                FashionablyLate
-            </a>
-        </div>
-    </header>
+@section('css')
+<link rel="stylesheet" href="{{ asset('css.thanks.css') }}">
+@endsection
 
 @section('content')
 <div class="thanks__content">

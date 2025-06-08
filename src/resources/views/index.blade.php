@@ -1,30 +1,18 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FashionablyLate</title>
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
-</head>
+@extends('layouts.app')
 
-<body>
-    <header class="header">
-        <div class="header__inner">
-            <a class="header__logo" href="/">
-                FashionablyLate
-            </a>
-        </div>
-    </header>
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/index.css') }}">
+@endsection
 
-        <div class="contact-form__content">
+@section('content')
+
+<div class="contact-form__content">
             <div class="contact-form__heading">
                 <h2>Contact</h2>
             </div>
             <form class="form" action="/confirm" method="post">
                 @csrf
-                <div class="form-group">
+                <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">お名前</span>
                         <span class="form__label--required">※</span>
@@ -73,10 +61,10 @@
                 <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">電話番号</span>
-                        <span class="form__group--required">※</span>
+                        <span class="form__label--required">※</span>
                     </div>
                     <div class="form__group-content">
-                        <div class="form__input-text">
+                        <div class="form__input--text">
                             <input type="tel" name="tel1" placeholder="080" value="{{ old('tel') }}" />  -
                             <input type="tel" name="tel2" placeholder="1234" value="{{ old('tel') }}" />  -
                             <input type="tel" name="tel3" placeholder="5678" value="{{ old('tel') }}" />
@@ -94,7 +82,7 @@
                         <span class="form__label--required">※</span>
                     </div>
                     <div class="form__group-content">
-                        <div class="form__input-text">
+                        <div class="form__input--text">
                             <input type="text" name="address" placeholder="例 東京都渋谷区千駄1-2-3" value="{{old('address') }}" />
                         </div>
                         <div class="form__error">
@@ -109,7 +97,7 @@
                         <span class="form__label--item">建物名</span>
                     </div>
                     <div class="form__group-content">
-                        <div class="form__input-text">
+                        <div class="form__input--text">
                             <input type="text" name="building" placeholder="千駄々谷マンション101" value="{{ old('building') }}" />
                         </div>
                         <div class="form__error">
@@ -139,11 +127,11 @@
                 </div>
                 <div class="form__group">
                     <div class="form__group-title">
-                        <span class="form__group--item">お問い合わせ内容</span>
-                        <span class="form__group--required">※</span>
+                        <span class="form__label--item">お問い合わせ内容</span>
+                        <span class="form__label--required">※</span>
                     </div>
                     <div class="form__group-content">
-                        <div class="form__input-text">
+                        <div class="form__input--text">
                             <input type="text" name="detail" placeholder="お問い合わせ内容をご記載ください" value="{{ old('message') }}" />
                         </div>
                         <div class="form__error">
@@ -158,5 +146,4 @@
                 </div>
             </form>
         </div>
-    </body>
-</html>
+    @endsection

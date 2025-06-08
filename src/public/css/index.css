@@ -1,6 +1,6 @@
 .contact-form__content{
     margin: 0 auto;
-    padding : 30px 15px;
+    padding: 30px 15px;
     max-width: 1230px;
 }
 
@@ -10,59 +10,60 @@
 }
 
 .form{
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.form__group{
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
 }
 
-.form__group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
-
-.form__label--required {
+.form__label--required{
     margin-left: 5px;
     padding: 4px 6px;
     border-radius: 3px;
     background: #fafafa;
-    color: #aaa;
+    color: red;
 }
 
-.form__error {
+.form__error{
     height: 20px;
     color: #ff0000;
     text-align: left;
 }
 
 .form__input--text input,
-.form__input--textarea textarea {
-    padding: 10px;
-    width: 600px;
+.form__inout--textarea textarea{
+    padding: 5px;
+    width: 200;
     border: 1px solid #ddd;
     border-radius: 3px;
+    background-color: rgb(236, 234, 234);
 
     appearance: none;
 }
 
-.form__input--text input {
-    height: 40px;
+.form__input--text input{
+    height: 20px;
 }
 
-.form__input--textarea textarea {
+.form__input--textarea textarea{
     height: 180px;
 }
 
-.form__button {
+.form__button{
     margin-top: 30px;
 }
 
-.form__button-submit {
+.form__button-submit{
     padding: 10px;
-    width: 30%;
-    height: 50px;
+    width: 10%;
     border: none;
     border-radius: 3px;
-    background: #000;
+    background: #7e6d6d;
     color: #fff;
-    cursor: pointer; }
+    cursor: pointer;
+}
