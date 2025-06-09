@@ -18,7 +18,7 @@
                         <span class="form__label--required">※</span>
                     </div>
                     <div class="form__group-content">
-                        <div class="form__input--text">
+                        <div class="form__input--item">
                             <input type="text" name="last-name" placeholder="例 山田" value="{{ old('name') }}" />
                             <input type="text" name="first-name" placeholder="例 太郎"  value="{{ old ('name') }}"/>
                         </div>
@@ -64,7 +64,7 @@
                         <span class="form__label--required">※</span>
                     </div>
                     <div class="form__group-content">
-                        <div class="form__input--text">
+                        <div class="form__input--tel">
                             <input type="tel" name="tel1" placeholder="080" value="{{ old('tel') }}" />  -
                             <input type="tel" name="tel2" placeholder="1234" value="{{ old('tel') }}" />  -
                             <input type="tel" name="tel3" placeholder="5678" value="{{ old('tel') }}" />
