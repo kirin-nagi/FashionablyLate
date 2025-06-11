@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+<div class="relative">
+    <h1 class="absolute">Thank you</h1>
+</div>
 <div class="thanks__content">
     <div class="thanks__heading">
         <h2>お問い合わせありがとうございました</h2>
